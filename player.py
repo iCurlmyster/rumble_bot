@@ -21,7 +21,12 @@ def get_player(did, n):
     pl = Player.select().where(Player.discord_id == did)
     if len(pl) == 0:
         pl = [Player.create(discord_id=did,name=n)]
-    return pl[0]
+    ret_pl = pl[0]
+    # update name if changed
+    if ret_pl.name != n:
+        ret_pl.name = n
+        ret_pl.save()
+    return ret_pl
 
 # TODO maybe invite the possibilty to vary the percentages based on how much they workout within a time frame
 def increase_health(did, n):
