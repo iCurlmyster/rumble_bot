@@ -1,7 +1,6 @@
 import random as r
 from player import Player
 
-
 def max(a, b):
     """
     max returns the max value
@@ -46,12 +45,4 @@ def rumble(p1, p2):
             return fight_results(punching, taking, turns)
         punching, taking = taking, punching
         turns = turns + 1
-
-
-
-if __name__ == "__main__":
-    for i in range(0,100):
-        p1 = Player("Joshua", 100, 2)
-        p2 = Player("Cody")
-        print(rumble(p1, p2))
 
