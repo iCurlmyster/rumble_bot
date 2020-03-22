@@ -78,4 +78,8 @@ async def info(ctx, p1=None):
     finally:
         await ctx.send(message)
 
+@bot.command(name="rumble_src", help="Display the github.com repo for this bot")
+async def display_info(ctx):
+    await ctx.send("This bots code can be found here -> https://github.com/iCurlmyster/rumble_bot")
+
 bot.run(TOKEN)
