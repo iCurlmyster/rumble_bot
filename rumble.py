@@ -1,14 +1,6 @@
 import random as r
 from player import Player
 
-def max(a, b):
-    """
-    max returns the max value
-    """
-    if a < b:
-        return b
-    return a
-
 def hit_det(strength, threshold):
     """
     hit_det determines what amount of hit points get dealt
