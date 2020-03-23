@@ -4,7 +4,7 @@ from peewee import *
 
 db_name = os.getenv('RUMBLE_DB')
 if db_name == None:
-    db_name = "testDB.db"
+    raise Exception("DB_ERROR", "Must set the RUMBLE_DB environment variable with an appropriate database name")
 
 logging.info(f"DB: {db_name}")
 
